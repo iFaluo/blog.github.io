@@ -1,0 +1,127 @@
+@charset "utf-8";
+
+.naviBody{
+    float:left;
+    width:280px;
+    height:120px;
+    padding:10px 10px 20px 10px;
+    border:1px solid #FFFFFF;
+}
+.naviBody:hover{
+    /* border:1px solid #CCCCCC; */
+    box-shadow:3px 3px 2px 2px #EEEEEE;
+    cursor:pointer;
+}
+.naviBody_m{
+    clear:both;
+    width:400px;
+    height:80px;
+    padding:10px 10px 20px 30px;
+    border:1px solid #FFFFFF;
+}
+.naviBody_m:hover{
+    /* border:1px solid #CCCCCC; */
+    box-shadow:3px 3px 2px 2px #EEEEEE;
+    cursor:pointer;
+}
+.naviTitle{
+    width:100%;
+    font-size:0.9em;
+    text-align:center;
+    font-weight:bold;
+}
+.naviTitle_m{
+    width:280px !important;
+    font-size:2.0em;
+    line-height:80px;
+    text-align:left;
+    padding-left:20px;
+    float:left;
+}
+.naviDesc{
+    width:100%;
+    color:#999999;
+    font-size:0.8em;
+    text-align:center;
+    line-height:20px;
+    word-break:break-all;
+}
+.naviTags{
+    clear:both;
+    margin-bottom:80px;
+    width:100%;
+    letter-spacing:1.1px;
+    font-size:1.0em;
+}
+.tag{
+    float:left;
+    width:60px;
+    text-align:center;
+    letter-spacing:1.1px;
+    margin-left:10px;
+    padding:4px 5px 4px 5px;
+    color:#333333;
+}
+.tag_m{
+    width:100px;
+    font-size:2.0em;
+}
+.tag:hover{
+    color:#333333;
+    border-bottom:2px solid #90C5E8;
+    cursor:pointer;
+}
+.tagSelected{
+    float:left;
+    width:60px;
+    text-align:center;
+    letter-spacing:1.1px;
+    margin-left:10px;
+    padding:4px 5px 4px 5px;
+    color:#0077C6;
+    border-bottom:2px solid #90C5E8;
+    /* background-color:#0077C6; */
+}
+.tagSelected_m{
+    width:100px;
+    font-size:2.0em;
+}
+.defLogo{
+    border:1px solid #FFFFFF;
+    border-radius:8px;
+    width:32px;
+    height:32px;
+    margin:0px auto;
+    padding:3px 5px 3px 5px;
+    color:#FFFFFF;
+    font-weight:bold;
+    background-color:#0077C6;
+}
+.defLogo_m{
+    width:80px;
+    height:80px;
+    font-size:2.3em;
+    line-height:80px;
+    float:left;
+}
+input[type="button"]{
+    border:1px solid #CCCCCC;
+    background-color:#E2E2E2;
+    font-size:0.8em;
+    border-radius:5px;
+    letter-spacing:6px;
+    padding:8px 13px 8px 16px;
+    cursor:pointer;
+}
+input[type="button"]:hover{
+    background-color:#CCCCCC;
+}
+input[type="text"]{
+    width:300px;
+    height:30px;
+    outline:none;
+    box-shadow:none;
+    font-size:0.8em;
+    padding-left:6px;
+    border:1px solid #CCCCCC;
+}

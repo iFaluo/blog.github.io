@@ -1,0 +1,294 @@
+@charset "utf-8";
+
+/* @font-face{
+    font-family: '思源开源';
+    src:url('fonts/SourceHanSerif-ExtraLight.ttc');
+} */
+
+html,body{
+    height:100%;
+    margin:0px;
+    background-color:#FFFFFF;
+    overflow-x:hidden;
+    overflow-y:hidden;
+    font-family:微软雅黑,PingFangSC-Medium,Monaco,Andale Mono,Courier New,monospace;
+}
+.head_bar{
+    border-bottom:1px solid #CCCCCC;
+    height:60px;
+    width:100%;
+    line-height:60px;
+}
+img#logo{
+    width:50px;
+    height:50px;
+    margin-left:20px;
+    margin-top:8px;
+    margin-right:15px;
+    float:left;
+}
+.menu{
+    height:53px;
+    width:80px;
+    margin-left:10px;
+    margin-top:5px;
+    /* margin-bottom:-5px; */
+    color:#000000;
+    font-size:1.0em;
+    font-weight:bold;
+    text-align:center;
+    line-height:60px;
+    float:left;
+}
+.menu:hover{
+    cursor:pointer;
+    border-bottom:2px solid #F05A28;
+}
+.menu_selected{
+    border-bottom:2px solid #0077C6;
+}
+.main{
+    background-color:#FAFAFA;
+    height:100%;
+    width:100%;
+    overflow-y:auto;
+}
+.main_block{
+    width:1060px;
+    margin:0 auto;
+    overflow:hidden;
+}
+.tiny_block{
+    border:1px solid #CCCCCC;
+    margin-top:15px;
+    margin-bottom:15px;
+    padding:10px;
+    width:600px;
+    height:500px;
+    float:left;
+    clear:both;
+    background-color:#FFFFFF;
+}
+.full_block{
+    width:1000px;
+    height:auto;
+}
+.page_box{
+    margin-top:15px;
+    margin-bottom:15px;
+    width:620px;
+    height:50px;
+    clear:both;
+}
+.page{
+    width:80px;
+    height:40px;
+    margin-left:20px;
+    float:right;
+    text-align:center;
+    color:#666666;
+    line-height:40px;
+    border-radius:3px;
+    border:1px solid #CCCCCC;
+}
+.page:hover{
+    cursor:pointer;
+    color:#000000;
+    background-color:#EEEEEE;
+}
+.feet{
+    border-top:1px solid #CCCCCC;
+    /* padding-bottom:10px; */
+    height:50px;
+    width:100%;
+    clear:both;
+    line-height:50px;
+    text-align:center;
+    color:#666666;
+    font-size:0.8em;
+    letter-spacing:0.1em;
+    background-color:#FFFFFF;
+}
+.nail_bottom{
+    position:absolute;
+    bottom:0px;
+}
+.fleft{
+    float:left;
+}
+.side_bar{
+    border:1px solid #CCCCCC;
+    margin-top:15px;
+    margin-left:15px;
+    padding:10px;
+    width:350px;
+    height:auto;
+    line-height:30px;
+    background-color:#FFFFFF;
+    font-size:0.9em;
+}
+.side_title{
+    margin-bottom:20px;
+    color:#000000;
+    font-weight:bold;
+    font-size:1.0em;
+    height:20px;
+}
+.side_title::before{
+    content:"";
+    border:2px solid #0077C6;
+    margin-right:12px;
+    font-size:0.8em;
+}
+a{
+    color:#666666;
+    text-decoration:none;
+}
+a:hover{
+    color:#0077C6 !important;
+    cursor:pointer;
+}
+a:visited{
+    color:#666666;
+}
+a#title{
+    color:#000000;
+    text-decoration:none;
+}
+a#title:hover{
+    color:#0077C6 !important;
+    cursor:pointer;
+}
+a#title:visited{
+    color:#000000;
+}
+.art_title{
+    color:#000000;
+    font-size:1.4em;
+    font-weight:bold;
+    margin-top:8px;
+    margin-bottom:10px;
+}
+.art_title_img{
+    width:100%;
+    height:160px;
+}
+.art_split{
+    border-bottom:1px solid #EEEEEE;
+    padding-left:10px;
+    padding-right:-10px;
+    padding-top:5px;
+    padding-bottom:5px;
+    width:98%;
+}
+.art_author{
+    padding-top:10px;
+    padding-right:-10px;
+    width:100%;
+    color:#666666;
+    font-size:0.9em;
+    text-align:right;
+    margin-top:5px;
+    margin-bottom:8px;
+}
+.art_desc{
+    line-height:35px;
+    padding-top:10px;
+    color:#000000;
+    font-size:1.0em;
+    height:290px;
+}
+.full_art{
+    width:960px !important;
+    height:auto;
+    padding:20px 20px 20px 20px !important;
+}
+.art_feet{
+    color:#666666;
+    font-size:0.9em;
+    text-align:right;
+    padding-top:66px;
+    padding-right:10px;
+    width:100%;
+    margin-bottom:20px;
+}
+ul{
+    width:100%;
+    padding:0px;
+    margin:0px;
+}
+li{
+    list-style:none;
+    width:100%;
+    margin-left:18px;
+}
+.quote{
+    border-left:3px solid #0077C6;
+    padding-left:20px;
+    color:#666666;
+    background-color:#FFFFFF;
+}
+.cell{
+    width:66px;
+    height:30px;
+    padding:5px;
+    float:left;
+}
+.cell_font{
+    margin-left:5px;
+    color:#666666;
+    font-size:0.9em;
+}
+.color_line{
+    width:100%;
+    height:30px;
+    padding-top:20px;
+    clear:both;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* *************************************************************************** */
