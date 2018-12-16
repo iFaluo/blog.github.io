@@ -151,6 +151,17 @@ a:hover{
 a:visited{
     color:#666666;
 }
+a.in_article{
+    color:#CC66FF;
+    text-decoration:none;
+}
+a.in_article:hover{
+    color:#0077C6 !important;
+    cursor:pointer;
+}
+a.in_article:visited{
+    color:#CC66FF;
+}
 a#title{
     color:#000000;
     text-decoration:none;
