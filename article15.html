@@ -6,25 +6,25 @@
 
 <p><strong>首先，是规划功能点。</strong>倒数日类的程序算是应用范围比较广的。需求简单，功能点也比较固定。</p>
 
-<p><img style="max-width:950px;" src="https://mmbiz.qpic.cn/mmbiz_png/7OiaPgo1BdY5L0hjLcfduwtqycqMlXjUS32l6R0tG7ibicnJo85bMSYgueHibMclo8LARoab41yMAhqDpPibk72rI4g/640?wx_fmt=png" alt="思维导图.png" /></p>
+<p><img style="max-width:950px;" src="img/img15-02.png" alt="思维导图.png" /></p>
 
 <p>上图是功能点的思维导图。和同类型的工具相比，我做了两点改动。一是<strong>去除了分类</strong>。主要是考虑到在一段时间范围内，并不会有太多重要到需要您数着日子来规划的事情，所以列表中不会有太多数据，分类也就没有用了。二是<strong>事项重复的方式</strong>，我只保留了按月和按年重复，而删除了按周重复。以我的拙见，每周固定时间会发生的事情没有必要写在APP里吧？而按月和按年重复就非常有必要了。以按月为例，有不少喜欢用倒数日类应用的朋友都喜欢把发薪日记下来，看看离下次发薪水还有几天，认真规划开销，不再做月光族；也有人喜欢把还款日记录下来，让自己提前做好准备。这一功能点上我的处理方式也可能和同类应用略有不同。比如，我们都知道每年的2月、4月、6月、9月和11月份只有30天，如果你设置了每月的31号重复一件事，那这一年内就只能被提醒七次了。因为“每月31日提醒做某事”这一需求在我看来本身就有问题。同样的，如果您设置了每月29号提醒做某事，那么2月份可能会有问题。取决于当年的2月份有没有29号。</p>
 
 <p><strong>其次，是设计界面。</strong>功能点已经敲定了，但是界面怎么办？虽然我没指望对界面设计一窍不通的我一下子能设计出多华丽的界面，但至少也要让大家能看得下去。于是我买了本参考书。</p>
 
-<p><img style="max-width:950px;" src="https://mmbiz.qpic.cn/mmbiz_png/7OiaPgo1BdY5L0hjLcfduwtqycqMlXjUSHc9IyxxPE4arP4ocx4aLf09gVKNcSUbolzNyLHS14sYzuMTPgCpXjw/640?wx_fmt=png" alt="书" /></p>
+<p><img style="max-width:950px;" src="img/img15-03.png" alt="书" /></p>
 
 <p>个人觉得这本书作为外行的入门书挺不错。虽然我才看了1/3，但是引言中的四大原则和第四章对名片设计的几个小例子已经对我有很大的影响了，所以我才做了出这种卡片式的列表。</p>
 
-<p><img style="max-width:950px;" src="https://mmbiz.qpic.cn/mmbiz_png/7OiaPgo1BdY5L0hjLcfduwtqycqMlXjUSzyLpHqic7fmM0LIBe5qYiaWWSicxeom9qiabn0CeyiaC3ADADn6dky07Snw/640?wx_fmt=png" alt="卡片" /></p>
+<p><img style="max-width:950px;" src="img/img15-04.jpg" alt="卡片" /></p>
 
 <p>这种卡片非常简洁，对比强烈，上面的信息一目了然。最醒目的是事项名称和天数。起始日期作为次要信息用稍小的字号标在了最下面。虽然不是什么华丽的界面，但是相对于我上一版简陋的列表来说好了许多。添加和修改页面并没有做过什么设计，只是把文字和预览图片等原素对齐了而已。很多时候只要把“对齐”这一件事做好，界面就会显得很漂亮。</p>
 
-<p><img style="max-width:950px;" src="https://mmbiz.qpic.cn/mmbiz_png/7OiaPgo1BdY5L0hjLcfduwtqycqMlXjUSLWzMw8iaiavHOFIctRwwncQ0jjyY6Jad51XoklBicA6NVSXROibBiaxVqVw/640?wx_fmt=png" alt="编辑" /></p>
+<p><img style="max-width:950px;" src="img/img15-05.png" alt="编辑" /></p>
 
 <p><strong>最后才是开发。</strong>到了开发这一阶段就简单了。共用5天时间，并非每天8小时，只是有空时写个2、3个小时，就开发完了。下面是任务进度表。我用自己之前开发的CafeProject来管理自己的项目进度。</p>
 
-<p><img style="max-width:950px;" src="https://mmbiz.qpic.cn/mmbiz_jpg/7OiaPgo1BdY5L0hjLcfduwtqycqMlXjUSqOWnDRPvf5AzrtaSVnA0Em9iczB4VI1WQRwy8PRPwchnDOa8SBs0oLg/640?wx_fmt=jpeg" alt="cafeProject.jpeg" /></p>
+<p><img style="max-width:950px;" src="img/img15-06.jpg" alt="cafeProject.jpeg" /></p>
 
 <p>在我看来，腾讯提供的官方开发文档算是非常详尽了，语言也就是JS/CSS那一套，所以并没有什么难度。只不过这次用来开发的硬件比较让我头痛。90%的代码都是在我以前提过的那部只有4G内存，64G的eMMC存储的Surface Go上完成的。开发过程中卡顿严重，但是仍然可以完成工作。并不是我自虐非得用这么差的本子，而只是好奇如果把低配的Surface Go作为垒代码的工具，它的极限在哪里。显然，这就是了。本以为只要不用Eclipse或iDea那种“重型”IDE开发就没问题的。看来我还是太天真。</p>
 
