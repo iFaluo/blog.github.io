@@ -146,11 +146,6 @@ function calcAverage(){
     return 0;
 }
 
-// function initCube(){
-//     timeShow = "00:00";
-//     $('#timer').text(timeShow);
-// }
-
 function formatTime($cc){
     var tmp = $cc;
     if (isEmputy(tmp)){
@@ -180,7 +175,7 @@ function formatTime($cc){
 function starCube(){
     cubeCount++;
     var tmp = cubeCount;
-    if (tmp == 360){
+    if (tmp == 3600){
         stopCube();
     } else {
         timeShow = formatTime(tmp);
