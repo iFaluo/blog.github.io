@@ -1,11 +1,27 @@
+// ====================================
+// 
+// 作者：MNing
+// 日期：2019-01-12~13
+// 
+// 简易魔方计时器
+// 
+// ====================================
+
+
 var sTime = 0;
 var cubeCount = -1;
 var timeShow = '00:00';
 var palyIndex = 0;
-var playTimes = new Array(12);
+var playTimes = new Array(12).fill(0);
+var q = 3600;
+var s = 0;
+var av = 0;
 
 $(function(){
     initCubePage();
+    $("#quick").text("最快=" + formatTime(q));
+    $("#slow").text("最慢=" + formatTime(s));
+    $("#av").text("平均=" + formatTime(calcAverage()));
     showPlays();
     $(document).keydown(function(e) {
         if (e.which == 32){
@@ -16,6 +32,15 @@ $(function(){
                 if (palyIndex == 12){
                     palyIndex = 0;
                 }
+                if (cubeCount < q){
+                    q = cubeCount;
+                }
+                if (cubeCount > s){
+                    s = cubeCount
+                }
+                $("#quick").text("最快=" + formatTime(q));
+                $("#slow").text("最慢=" + formatTime(s));
+                $("#av").text("平均=" + formatTime(calcAverage()));
                 randomCube();
                 showPlays();
             } else {
@@ -47,12 +72,17 @@ function initCubePage(){
 
     $midare = "<div class='midare' id='midare'>L2 D U2 B' F U2 B R U' L2 R' D2 B2 D2 U' B F2 R2 B' F L2 B' F' L R2</div>";
 
-    $mo3 = "<div id='mo3' style='width:100%;height:50px;text-align:center;font-size:1.2em;color:#333333;'>MO3=</div>";
-    $ao5 = "<div id='ao5' style='width:100%;height:50px;text-align:center;font-size:1.2em;color:#333333;'>AO5=</div>";
-    $ao12 = "<div id='ao12' style='width:100%;height:50px;text-align:center;font-size:1.2em;color:#333333;'>AO12=</div>";
+    $q = "<div id='quick' style='width:100%;height:50px;text-align:center;font-size:1.2em;color:#333333;'>最快=</div>";
+    $s = "<div id='slow' style='width:100%;height:50px;text-align:center;font-size:1.2em;color:#333333;'>最慢=</div>";
+    $av = "<div id='av' style='width:100%;height:50px;text-align:center;font-size:1.2em;color:#333333;'>平均=</div>";
 
     $plays = "<div id='plays' style='width:100%;height:auto;padding-top:30px;'></div>";
-    $total = $timer + $midare + $mo3 + $ao5 + $ao12 + $plays;
+
+    $tips = "<div style='width:100%;height:auto;font-size:0.9em;text-align:center;color:#999999;padding-top:58px;'>";
+    $tips += "魔方新手。自制简易的只有计时功能的计时器。欢迎使用体验。";
+    $tips += "</div>";
+
+    $total = $timer + $midare + $q + $s + $av + $plays + $tips;
     $cube.html($total);
 }
 
@@ -62,13 +92,17 @@ function showPlays(){
         play += "<div style='width:730px;margin:0px auto;clear:both;background-color:#FF0000;'>";
         for(var j = i ; j < i + 6 ; ++j){
             play += "<div style='float:left;width:120px;'>";
-            play += j + ":" + formatTime(playTimes[j]);
+            play += "<b>" + zero(j + 1) + "</b> : " + formatTime(playTimes[j]);
             play += "</div>";
         }
         play += "</div>";
     }
     
     $('#plays').html(play);
+}
+
+function zero($j){
+    return $j < 10 ? "0" + $j : $j;
 }
 
 function randomCube(){
@@ -98,10 +132,24 @@ function randomCube(){
     $('#midare').text(cubes[tmp]);
 }
 
-function initCube(){
-    timeShow = "00:00";
-    $('#timer').text(timeShow);
+function calcAverage(){
+    var sum = 0;
+    for (var i = 0 ; i < playTimes.length ; ++i){
+        sum += playTimes[i];
+    }
+    if (sum > 0){
+        if (playTimes[playTimes.length - 1] > 0){
+            return Math.ceil(sum / playTimes.length);
+        }
+        return Math.ceil(sum / palyIndex);
+    }
+    return 0;
 }
+
+// function initCube(){
+//     timeShow = "00:00";
+//     $('#timer').text(timeShow);
+// }
 
 function formatTime($cc){
     var tmp = $cc;
@@ -168,7 +216,7 @@ function resize(){
     var mainBlockHeight = parseInt($("#main_block").css("height"));
     $("#main_block").css("left",(w-mainBlockWidth)/2);
     $("#tiny_block").css("width",1000);
-    $("#tiny_block").css("height",700);
+    $("#tiny_block").css("height",760);
     $("#art_title").css("width",1000);
     $("#art_title").css("text-align","left");
     $("#art_title").addClass("full_art");
@@ -181,7 +229,6 @@ function resize(){
 	} else {
 		$("#feet").removeClass("nail_bottom");
 	}
-
 }
 
 function flushSize(){
