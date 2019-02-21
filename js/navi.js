@@ -302,7 +302,7 @@ $(window).resize(function(){
 function resize(){
     flushSize();
     var w = parseInt($(document.body).width());
-    if (w < 1000){
+    // if (w < 1000){
         // w = w - 80;
         // navi_m(0);
         // $("#main_block").css("width",w);
@@ -313,7 +313,7 @@ function resize(){
         // $("#art_split").css("width",w-40);
         // $("#art_author").css("width",w-40);
         // $("#feet").css("width",w+60);
-    } else {
+    // } else {
         navi(0);
         var mainBlockWidth = parseInt($("#main_block").css("width"));
         $("#main_block").css("left",(w-mainBlockWidth)/2);
@@ -325,7 +325,7 @@ function resize(){
         $("#art_author").css("width",1000);
         $("#art_author").addClass("full_art");
         $("#feet").css("width",w-17);
-    }
+    // }
 
 }
 

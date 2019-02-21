@@ -9,7 +9,7 @@
 }
 .naviBody:hover{
     /* border:1px solid #CCCCCC; */
-    box-shadow:3px 3px 2px 2px #EEEEEE;
+    box-shadow:-2px 2px 5px 3px #EEEEEE;
     cursor:pointer;
 }
 .naviBody_m{
@@ -88,9 +88,9 @@
 }
 .defLogo{
     border:1px solid #FFFFFF;
-    border-radius:8px;
+    border-radius:60px;
     width:32px;
-    height:32px;
+    height:35px;
     margin:0px auto;
     padding:3px 5px 3px 5px;
     color:#FFFFFF;
