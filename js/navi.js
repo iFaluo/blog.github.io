@@ -26,6 +26,7 @@ function getLifeArray(){
         ["少数派","https://sspai.com/","","高效工作，品质生活","FF9999"],
         ["玩儿法","https://www.waerfa.com/","","应用提高设备生产力","FF9999"],
         ["爱范儿","https://www.ifanr.com/","","让未来触手可及","FF9999"],
+        ["好奇心日报","http://www.qdaily.com/","","好奇驱动你的世界_Qdaily","FF9999"],
         ["知乎","https://www.zhihu.com/","","有问题上知乎","FF9999"],
         ["豆瓣","https://www.douban.com/","","城市独特的文化生活","FF9999"],
         ["利器","http://liqi.io/","","创造者和他们的工具","FF9999"],
@@ -35,15 +36,17 @@ function getLifeArray(){
     $lifeArray[1] = [
         ["IPN","https://ipn.li/","","for discriminating listeners","990066"],
         ["狗熊阅读","http://www.readwithbear.com/","","高效阅读","990066"],
-        ["Anyway.FM","https://anyway.fm/","","我们，想让你的听觉更懂视觉。","990066"]
+        ["Anyway.FM","https://anyway.fm/","","我们，想让你的听觉更懂视觉。","990066"],
+        ["Byte.coffee","http://byte.coffee/","","一档播客以及咖啡本人","990066"]
     ];
     // 玩
     $lifeArray[2] = [
         ["ACFun","http://www.acfun.cn/","","认真你就输啦 (?ω?)ノ- ( ゜- ゜)つロ","0099CC"],
         ["Bilibili","https://www.bilibili.com/","","哔哩哔哩 (゜-゜)つロ 干杯~-bilibili","0099CC"],
-        ["Dilidili","http://www.dilidili.wang/","","这里是兴趣使然的无名小站（D站）","0099CC"],
+        ["Dilidili","http://www.dilidili.name/","","这里是兴趣使然的无名小站（D站）","0099CC"],
         ["蜜柑计划","https://mikanani.me/","","新一代的动漫...","0099CC"],
-        ["stage1st","https://bbs.saraba1st.com/2b/forum.php","","游戏动漫论坛","0099CC"],
+        ["Stage1st","https://bbs.saraba1st.com/2b/forum.php","","游戏动漫论坛","0099CC"],
+        ["Anitama","http://www.anitama.cn/","","面向动漫爱好者的专业媒体，提供高质量的、最新的动漫资讯，内容丰富，推送及时。","0099CC"],
         ["动漫之家","https://www.dmzj.com/","","动漫之家","0099CC"],
         ["网易漫画","https://manhua.163.com/","","精品正版原创漫画平台","0099CC"]
     ];
@@ -204,7 +207,7 @@ function navi($id){
 
         $divNavis += "<div style='height:800px;width:100%;'>";
         $divNavis += "<input type='text' id='search' style='margin-top:150px;margin-left:90px;height:50px;width:800px;font-size:1.1em;' onKeyPress='s();' autocomplete='off' placeholder='搜索...' />";
-        $divNavis += "<div style='width:100%;font-size:0.9em;color:#999999;text-align:center;padding-top:30px;'>按回车随机搜索</div>";
+        $divNavis += "<div style='width:100%;font-size:0.9em;color:#999999;text-align:center;padding-top:30px;'>Search by Bing...</div>";
         $divNavis += "</div>";
 
         $divNavis += "</div>";
@@ -281,12 +284,12 @@ function s(){
     var e = window.event || arguments.callee.caller.arguments[0];
 	if (e.keyCode == 13){
         $search = $("#search").val();
-        $rnd = Math.floor(Math.random()*10);
-        if ($rnd % 2 == 0){
+        // $rnd = Math.floor(Math.random()*10);
+        // if ($rnd % 2 == 0){
             window.open('https://cn.bing.com/search?q=' + $search);
-        } else {
-            window.open('https://www.baidu.com/s?wd=' + $search);
-        }
+        // } else {
+        //     window.open('https://www.baidu.com/s?wd=' + $search);
+        // }
         
 	}
 }
